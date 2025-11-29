@@ -10,5 +10,8 @@ public interface EmployeeService {
     Employee findById(Long id);
     void delete(Long id);
     Employee update(Long id , Employee employee);
+    // Ajouter ces méthodes
+    Employee findByEmail(String email);
+    boolean existsByEmail(String email);
 
 }

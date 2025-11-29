@@ -37,7 +37,7 @@ public class Employee implements UserDetails {
 
     @Email(message = "Email should be valid")
     @NotBlank(message = "Email is required")
-    @Column
+    @Column(unique = true)
     private String email;
 
     @NotNull(message = "Salary is required")
@@ -66,7 +66,7 @@ public class Employee implements UserDetails {
 
     @Override
     public boolean isAccountNonExpired() {
-        return UserDetails.super.isAccountNonExpired();
+        return true;
     }
 
     @Override
