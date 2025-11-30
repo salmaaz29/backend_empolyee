@@ -9,11 +9,6 @@ Application backend REST API pour la gestion des employés avec authentification
 ✅ Cryptage des mots de passe avec BCrypt
 ✅ Configuration CORS pour frontend Angular
 ✅ Gestion des erreurs
-Fonctionnalités implémentées :
-- Gestion des **Classes**
-- Gestion des **Étudiants** 
-- Gestion des **Absences** par étudiant
-- CRUD complet sur toutes les entités
 
 ## Technologies utilisées
 | Technologie | Version | Description |
