@@ -27,6 +27,17 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
                                     HttpServletResponse response,
                                     FilterChain filterChain) throws ServletException, IOException {
 
+
+
+
+        // IGNORER complètement les routes d'authentification
+        String path = request.getRequestURI();
+        if (path.startsWith("/api/auth/")) {
+            System.out.println("🟢 SKIP JWT pour: " + path);
+            filterChain.doFilter(request, response);
+            return;
+        }
+
         final String authHeader = request.getHeader("Authorization");
         final String jwt;
         final String username;
